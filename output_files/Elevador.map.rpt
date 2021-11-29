@@ -1,0 +1,665 @@
+Analysis & Synthesis report for Elevador
+Fri Dec 04 16:33:56 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "sobeoudesce:comb_17|somador5bits:comb_19"
+ 11. Port Connectivity Checks: "sobeoudesce:comb_17|somador5bits:comb_18"
+ 12. Port Connectivity Checks: "movendo:comb_15|movendo1:comb_3|flipflopjk:comb_5"
+ 13. Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_15"
+ 14. Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_13"
+ 15. Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_11"
+ 16. Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_10"
+ 17. Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_10"
+ 18. Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_8"
+ 19. Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_6"
+ 20. Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_4"
+ 21. Port Connectivity Checks: "detdescida:comb_9|Mux16:comb_19"
+ 22. Port Connectivity Checks: "detsubida:comb_8|Mux16:comb_19"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Dec 04 16:33:56 2020       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Elevador                                    ;
+; Top-level Entity Name           ; Elevador                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 10                                          ;
+; Total pins                      ; 56                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Elevador           ; Elevador           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; Elevador.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/Elevador.v          ;         ;
+; Mux16.v                          ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/Mux16.v             ;         ;
+; detsubida.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/detsubida.v         ;         ;
+; detdescida.v                     ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/detdescida.v        ;         ;
+; flipflopjk.v                     ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/flipflopjk.v        ;         ;
+; portaaberta.v                    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/portaaberta.v       ;         ;
+; nandar.v                         ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/nandar.v            ;         ;
+; detectabotao.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/detectabotao.v      ;         ;
+; sobeoudesce.v                    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/sobeoudesce.v       ;         ;
+; somador5bits.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v      ;         ;
+; somaBit.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/somaBit.v           ;         ;
+; movendo.v                        ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/movendo.v           ;         ;
+; detecpare.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/detecpare.v         ;         ;
+; estadodosbotoes.v                ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v   ;         ;
+; estadoclear.v                    ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/estadoclear.v       ;         ;
+; movendo1.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/movendo1.v          ;         ;
+; movendo2.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/movendo2.v          ;         ;
+; movendo3.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/movendo3.v          ;         ;
+; latch.v                          ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/latch.v             ;         ;
+; apertarbotao.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/apertarbotao.v      ;         ;
+; controledodisplay.v              ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/20.1/PROJETO/controledodisplay.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 70                                 ;
+;                                             ;                                    ;
+; Combinational ALUT usage for logic          ; 123                                ;
+;     -- 7 input functions                    ; 1                                  ;
+;     -- 6 input functions                    ; 14                                 ;
+;     -- 5 input functions                    ; 18                                 ;
+;     -- 4 input functions                    ; 40                                 ;
+;     -- <=3 input functions                  ; 50                                 ;
+;                                             ;                                    ;
+; Dedicated logic registers                   ; 10                                 ;
+;                                             ;                                    ;
+; I/O pins                                    ; 56                                 ;
+;                                             ;                                    ;
+; Total DSP Blocks                            ; 0                                  ;
+;                                             ;                                    ;
+; Maximum fan-out node                        ; nandar:comb_11|flipflopjk:comb_4|Q ;
+; Maximum fan-out                             ; 46                                 ;
+; Total fan-out                               ; 593                                ;
+; Average fan-out                             ; 2.42                               ;
++---------------------------------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name     ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
+; |Elevador                    ; 123 (0)             ; 10 (0)                    ; 0                 ; 0          ; 56   ; 0            ; |Elevador                                                         ; Elevador        ; work         ;
+;    |controledisplay:comb_3|  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|controledisplay:comb_3                                  ; controledisplay ; work         ;
+;    |detdescida:comb_9|       ; 29 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|detdescida:comb_9                                       ; detdescida      ; work         ;
+;       |Mux16:comb_19|        ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|detdescida:comb_9|Mux16:comb_19                         ; Mux16           ; work         ;
+;    |detecpare:comb_10|       ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|detecpare:comb_10                                       ; detecpare       ; work         ;
+;       |Mux16:comb_3|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|detecpare:comb_10|Mux16:comb_3                          ; Mux16           ; work         ;
+;    |detectabotao:comb_7|     ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|detectabotao:comb_7                                     ; detectabotao    ; work         ;
+;    |detsubida:comb_8|        ; 23 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|detsubida:comb_8                                        ; detsubida       ; work         ;
+;       |Mux16:comb_19|        ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|detsubida:comb_8|Mux16:comb_19                          ; Mux16           ; work         ;
+;    |estadoclear:comb_5|      ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadoclear:comb_5                                      ; estadoclear     ; work         ;
+;    |estadodosbotoes:comb_6|  ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6                                  ; estadodosbotoes ; work         ;
+;       |latcht:comb_11|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_11                   ; latcht          ; work         ;
+;       |latcht:comb_13|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_13                   ; latcht          ; work         ;
+;       |latcht:comb_15|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_15                   ; latcht          ; work         ;
+;       |latcht:comb_17|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_17                   ; latcht          ; work         ;
+;       |latcht:comb_19|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_19                   ; latcht          ; work         ;
+;       |latcht:comb_21|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_21                   ; latcht          ; work         ;
+;       |latcht:comb_23|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_23                   ; latcht          ; work         ;
+;       |latcht:comb_25|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_25                   ; latcht          ; work         ;
+;       |latcht:comb_27|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_27                   ; latcht          ; work         ;
+;       |latcht:comb_29|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_29                   ; latcht          ; work         ;
+;       |latcht:comb_31|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_31                   ; latcht          ; work         ;
+;       |latcht:comb_33|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_33                   ; latcht          ; work         ;
+;       |latcht:comb_3|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_3                    ; latcht          ; work         ;
+;       |latcht:comb_5|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_5                    ; latcht          ; work         ;
+;       |latcht:comb_7|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_7                    ; latcht          ; work         ;
+;       |latcht:comb_9|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|estadodosbotoes:comb_6|latcht:comb_9                    ; latcht          ; work         ;
+;    |movendo:comb_15|         ; 2 (0)               ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|movendo:comb_15                                         ; movendo         ; work         ;
+;       |movendo1:comb_3|      ; 1 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|movendo:comb_15|movendo1:comb_3                         ; movendo1        ; work         ;
+;          |flipflopjk:comb_5| ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|movendo:comb_15|movendo1:comb_3|flipflopjk:comb_5       ; flipflopjk      ; work         ;
+;       |movendo2:comb_4|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|movendo:comb_15|movendo2:comb_4                         ; movendo2        ; work         ;
+;       |movendo3:comb_5|      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|movendo:comb_15|movendo3:comb_5                         ; movendo3        ; work         ;
+;    |nandar:comb_11|          ; 5 (3)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|nandar:comb_11                                          ; nandar          ; work         ;
+;       |flipflopjk:comb_10|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|nandar:comb_11|flipflopjk:comb_10                       ; flipflopjk      ; work         ;
+;       |flipflopjk:comb_4|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|nandar:comb_11|flipflopjk:comb_4                        ; flipflopjk      ; work         ;
+;       |flipflopjk:comb_6|    ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|nandar:comb_11|flipflopjk:comb_6                        ; flipflopjk      ; work         ;
+;       |flipflopjk:comb_8|    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|nandar:comb_11|flipflopjk:comb_8                        ; flipflopjk      ; work         ;
+;    |portaaberta:comb_13|     ; 2 (2)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|portaaberta:comb_13                                     ; portaaberta     ; work         ;
+;       |flipflopjk:comb_10|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|portaaberta:comb_13|flipflopjk:comb_10                  ; flipflopjk      ; work         ;
+;       |flipflopjk:comb_11|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|portaaberta:comb_13|flipflopjk:comb_11                  ; flipflopjk      ; work         ;
+;       |flipflopjk:comb_13|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|portaaberta:comb_13|flipflopjk:comb_13                  ; flipflopjk      ; work         ;
+;       |flipflopjk:comb_15|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|portaaberta:comb_13|flipflopjk:comb_15                  ; flipflopjk      ; work         ;
+;    |sobeoudesce:comb_17|     ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|sobeoudesce:comb_17                                     ; sobeoudesce     ; work         ;
+;       |somador5bits:comb_18| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|sobeoudesce:comb_17|somador5bits:comb_18                ; somador5bits    ; work         ;
+;          |somaBit:comb_4|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_4 ; somaBit         ; work         ;
+;          |somaBit:comb_5|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_5 ; somaBit         ; work         ;
+;       |somador5bits:comb_19| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|sobeoudesce:comb_17|somador5bits:comb_19                ; somador5bits    ; work         ;
+;          |somaBit:comb_6|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|sobeoudesce:comb_17|somador5bits:comb_19|somaBit:comb_6 ; somaBit         ; work         ;
+;          |somaBit:comb_7|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Elevador|sobeoudesce:comb_17|somador5bits:comb_19|somaBit:comb_7 ; somaBit         ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; estadodosbotoes:comb_6|latcht:comb_3|q~0               ;    ;
+; estadodosbotoes:comb_6|latcht:comb_5|q~0               ;    ;
+; estadodosbotoes:comb_6|latcht:comb_7|q~0               ;    ;
+; estadodosbotoes:comb_6|latcht:comb_9|q~0               ;    ;
+; estadodosbotoes:comb_6|latcht:comb_11|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_13|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_15|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_17|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_19|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_21|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_23|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_25|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_27|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_29|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_31|q~0              ;    ;
+; estadodosbotoes:comb_6|latcht:comb_33|q~0              ;    ;
+; Number of logic cells representing combinational loops ; 16 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 10    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sobeoudesce:comb_17|somador5bits:comb_19"                                                                                                                                               ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Ea[4]     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; vemUm     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; vemUm[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; S[3..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; estouro   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sobeoudesce:comb_17|somador5bits:comb_18"                                                                                                                                               ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Ea[4]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; Eb[4..1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; Eb[0]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; vemUm     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; vemUm[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; estouro   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "movendo:comb_15|movendo1:comb_3|flipflopjk:comb_5"                                                                                                                                  ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_15"                                                                                                                                             ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_13"                                                                                                                                             ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_11"                                                                                                                                             ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "portaaberta:comb_13|flipflopjk:comb_10"                                                                                                                                             ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; j      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; j[-1]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; k      ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; k[-1]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_10"                                                                                                                                                  ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_8"                                                                                                                                                   ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_6"                                                                                                                                                   ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "nandar:comb_11|flipflopjk:comb_4"                                                                                                                                                   ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ps[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "detdescida:comb_9|Mux16:comb_19" ;
++-------+-------+----------+----------------------------------+
+; Port  ; Type  ; Severity ; Details                          ;
++-------+-------+----------+----------------------------------+
+; in[0] ; Input ; Info     ; Stuck at GND                     ;
++-------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "detsubida:comb_8|Mux16:comb_19" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; in[15] ; Input ; Info     ; Stuck at GND                   ;
++--------+-------+----------+--------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 10                          ;
+;     CLR               ; 9                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 141                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 140                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 40                          ;
+;         5 data inputs ; 18                          ;
+;         6 data inputs ; 14                          ;
+; boundary_port         ; 56                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.61                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Fri Dec 04 16:33:47 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Elevador -c Elevador
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file elevador.v
+    Info (12023): Found entity 1: Elevador File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file mux16.v
+    Info (12023): Found entity 1: Mux16 File: C:/intelFPGA_lite/20.1/PROJETO/Mux16.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file detsubida.v
+    Info (12023): Found entity 1: detsubida File: C:/intelFPGA_lite/20.1/PROJETO/detsubida.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file detdescida.v
+    Info (12023): Found entity 1: detdescida File: C:/intelFPGA_lite/20.1/PROJETO/detdescida.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file flipflopjk.v
+    Info (12023): Found entity 1: flipflopjk File: C:/intelFPGA_lite/20.1/PROJETO/flipflopjk.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file portaaberta.v
+    Info (12023): Found entity 1: portaaberta File: C:/intelFPGA_lite/20.1/PROJETO/portaaberta.v Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file nandar.v
+    Info (12023): Found entity 1: nandar File: C:/intelFPGA_lite/20.1/PROJETO/nandar.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file detectabotao.v
+    Info (12023): Found entity 1: detectabotao File: C:/intelFPGA_lite/20.1/PROJETO/detectabotao.v Line: 3
+Warning (10275): Verilog HDL Module Instantiation warning at sobeoudesce.v(34): ignored dangling comma in List of Port Connections File: C:/intelFPGA_lite/20.1/PROJETO/sobeoudesce.v Line: 34
+Warning (10275): Verilog HDL Module Instantiation warning at sobeoudesce.v(35): ignored dangling comma in List of Port Connections File: C:/intelFPGA_lite/20.1/PROJETO/sobeoudesce.v Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file sobeoudesce.v
+    Info (12023): Found entity 1: sobeoudesce File: C:/intelFPGA_lite/20.1/PROJETO/sobeoudesce.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file somador5bits.v
+    Info (12023): Found entity 1: somador5bits File: C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file somabit.v
+    Info (12023): Found entity 1: somaBit File: C:/intelFPGA_lite/20.1/PROJETO/somaBit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file movendo.v
+    Info (12023): Found entity 1: movendo File: C:/intelFPGA_lite/20.1/PROJETO/movendo.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file detecpare.v
+    Info (12023): Found entity 1: detecpare File: C:/intelFPGA_lite/20.1/PROJETO/detecpare.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file estadodosbotoes.v
+    Info (12023): Found entity 1: estadodosbotoes File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file estadoclear.v
+    Info (12023): Found entity 1: estadoclear File: C:/intelFPGA_lite/20.1/PROJETO/estadoclear.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file movendo1.v
+    Info (12023): Found entity 1: movendo1 File: C:/intelFPGA_lite/20.1/PROJETO/movendo1.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file movendo2.v
+    Info (12023): Found entity 1: movendo2 File: C:/intelFPGA_lite/20.1/PROJETO/movendo2.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file movendo3.v
+    Info (12023): Found entity 1: movendo3 File: C:/intelFPGA_lite/20.1/PROJETO/movendo3.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file latch.v
+    Info (12023): Found entity 1: latcht File: C:/intelFPGA_lite/20.1/PROJETO/latch.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file apertarbotao.v
+    Info (12023): Found entity 1: apertarbotao File: C:/intelFPGA_lite/20.1/PROJETO/apertarbotao.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file controledodisplay.v
+    Info (12023): Found entity 1: controledisplay File: C:/intelFPGA_lite/20.1/PROJETO/controledodisplay.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Elevador.v(40): created implicit net for "descermovendo" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at nandar.v(12): created implicit net for "clock" File: C:/intelFPGA_lite/20.1/PROJETO/nandar.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(28): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 28
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(30): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 30
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(32): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(11): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(12): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(13): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(14): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(15): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(16): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(17): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(18): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(19): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 19
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(20): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(21): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(22): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(23): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(24): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(25): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at estadodosbotoes.v(26): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(34): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(36): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at detsubida.v(29): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/detsubida.v Line: 29
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(38): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 38
+Critical Warning (10846): Verilog HDL Instantiation warning at detdescida.v(27): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/detdescida.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(40): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 40
+Critical Warning (10846): Verilog HDL Instantiation warning at detecpare.v(12): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/detecpare.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(42): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 42
+Critical Warning (10846): Verilog HDL Instantiation warning at nandar.v(14): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/nandar.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at nandar.v(15): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/nandar.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at nandar.v(16): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/nandar.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at nandar.v(17): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/nandar.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(44): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 44
+Critical Warning (10846): Verilog HDL Instantiation warning at portaaberta.v(22): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/portaaberta.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at portaaberta.v(23): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/portaaberta.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at portaaberta.v(24): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/portaaberta.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at portaaberta.v(25): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/portaaberta.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(46): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 46
+Critical Warning (10846): Verilog HDL Instantiation warning at movendo1.v(15): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/movendo1.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at movendo.v(9): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/movendo.v Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at movendo.v(10): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/movendo.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at movendo.v(11): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/movendo.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(48): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 48
+Critical Warning (10846): Verilog HDL Instantiation warning at somador5bits.v(10): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at somador5bits.v(11): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at somador5bits.v(12): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at somador5bits.v(13): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at somador5bits.v(14): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at sobeoudesce.v(34): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/sobeoudesce.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at sobeoudesce.v(35): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/sobeoudesce.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at Elevador.v(50): instance has no name File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 50
+Info (12127): Elaborating entity "Elevador" for the top level hierarchy
+Info (12128): Elaborating entity "controledisplay" for hierarchy "controledisplay:comb_3" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 28
+Info (12128): Elaborating entity "apertarbotao" for hierarchy "apertarbotao:comb_4" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 30
+Info (12128): Elaborating entity "estadoclear" for hierarchy "estadoclear:comb_5" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 32
+Info (12128): Elaborating entity "estadodosbotoes" for hierarchy "estadodosbotoes:comb_6" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 34
+Info (12128): Elaborating entity "latcht" for hierarchy "estadodosbotoes:comb_6|latcht:comb_3" File: C:/intelFPGA_lite/20.1/PROJETO/estadodosbotoes.v Line: 11
+Info (12128): Elaborating entity "detectabotao" for hierarchy "detectabotao:comb_7" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 36
+Info (12128): Elaborating entity "detsubida" for hierarchy "detsubida:comb_8" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 38
+Info (12128): Elaborating entity "Mux16" for hierarchy "detsubida:comb_8|Mux16:comb_19" File: C:/intelFPGA_lite/20.1/PROJETO/detsubida.v Line: 29
+Info (12128): Elaborating entity "detdescida" for hierarchy "detdescida:comb_9" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 40
+Info (12128): Elaborating entity "detecpare" for hierarchy "detecpare:comb_10" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 42
+Info (12128): Elaborating entity "nandar" for hierarchy "nandar:comb_11" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 44
+Info (12128): Elaborating entity "flipflopjk" for hierarchy "nandar:comb_11|flipflopjk:comb_4" File: C:/intelFPGA_lite/20.1/PROJETO/nandar.v Line: 14
+Info (12128): Elaborating entity "portaaberta" for hierarchy "portaaberta:comb_13" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 46
+Info (12128): Elaborating entity "movendo" for hierarchy "movendo:comb_15" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 48
+Info (12128): Elaborating entity "movendo1" for hierarchy "movendo:comb_15|movendo1:comb_3" File: C:/intelFPGA_lite/20.1/PROJETO/movendo.v Line: 9
+Warning (10230): Verilog HDL assignment warning at movendo1.v(11): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/20.1/PROJETO/movendo1.v Line: 11
+Info (12128): Elaborating entity "movendo2" for hierarchy "movendo:comb_15|movendo2:comb_4" File: C:/intelFPGA_lite/20.1/PROJETO/movendo.v Line: 10
+Warning (10230): Verilog HDL assignment warning at movendo2.v(8): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/20.1/PROJETO/movendo2.v Line: 8
+Info (12128): Elaborating entity "movendo3" for hierarchy "movendo:comb_15|movendo3:comb_5" File: C:/intelFPGA_lite/20.1/PROJETO/movendo.v Line: 11
+Info (12128): Elaborating entity "sobeoudesce" for hierarchy "sobeoudesce:comb_17" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 50
+Info (12128): Elaborating entity "somador5bits" for hierarchy "sobeoudesce:comb_17|somador5bits:comb_18" File: C:/intelFPGA_lite/20.1/PROJETO/sobeoudesce.v Line: 34
+Info (12128): Elaborating entity "somaBit" for hierarchy "sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_3" File: C:/intelFPGA_lite/20.1/PROJETO/somador5bits.v Line: 10
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer detdescida:comb_9|Mux16:comb_19|Mux0 File: C:/intelFPGA_lite/20.1/PROJETO/Mux16.v Line: 8
+    Warning (19017): Found clock multiplexer detsubida:comb_8|Mux16:comb_19|Mux0 File: C:/intelFPGA_lite/20.1/PROJETO/Mux16.v Line: 8
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "display_dez[1]" is stuck at VCC File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 19
+    Warning (13410): Pin "display_dez[2]" is stuck at VCC File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 19
+    Warning (13410): Pin "display_dez[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "fechar" File: C:/intelFPGA_lite/20.1/PROJETO/Elevador.v Line: 23
+Info (21057): Implemented 183 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 127 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 4905 megabytes
+    Info: Processing ended: Fri Dec 04 16:33:56 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:23
+
+

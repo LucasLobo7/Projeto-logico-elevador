@@ -1,0 +1,16 @@
+module somador5bits(
+input [4:0] Ea, Eb,
+input vemUm,
+output [4:0] S,
+output estouro
+);
+
+	wire [3:0] vaiUm;
+	
+	somaBit(Ea[0], Eb[0], vemUm, S[0], vaiUm[0]);
+	somaBit(Ea[1], Eb[1], vaiUm[0], S[1], vaiUm[1]);
+	somaBit(Ea[2], Eb[2], vaiUm[1], S[2], vaiUm[2]);
+	somaBit(Ea[3], Eb[3], vaiUm[2], S[3], VaiUm[3]);
+	somaBit(Ea[4], Eb[4], vaiUm[3], S[4], estouro);
+	
+endmodule

@@ -1,0 +1,217 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ledbotao[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ledbotao[15]",
+					"strict" : false
+				},
+				{
+					"name" : "display_uni[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_uni[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_uni[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_uni[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_uni[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_uni[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_uni[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_dez[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_dez[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_dez[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_dez[5]",
+					"strict" : false
+				},
+				{
+					"name" : "andarprovisorio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "andarprovisorio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "andarprovisorio[2]",
+					"strict" : false
+				},
+				{
+					"name" : "andarprovisorio[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clear",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[2]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[4]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[5]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cartao_acesso",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[7]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[8]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[9]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[10]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[11]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[12]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[13]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[14]",
+					"strict" : false
+				},
+				{
+					"name" : "botoes[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "sensor",
+					"strict" : false
+				},
+				{
+					"name" : "segurar",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

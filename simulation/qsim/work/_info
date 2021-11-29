@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/20.1/PROJETO/simulation/qsim
+vElevador
+Z1 !s110 1607110442
+!i10b 1
+!s100 4elYc7Z;b^[Ha27``Eh<F1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IbZ>BY1;FiAZO?9IV1@B6@3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1607110441
+8Elevador.vo
+FElevador.vo
+!i122 474
+L0 32 4048
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1607110442.000000
+!s107 Elevador.vo|
+!s90 -work|work|Elevador.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@elevador
+vElevador_vlg_vec_tst
+R1
+!i10b 1
+!s100 ljCoiJdHXJZ9:FW7E3Dzm3
+R2
+IQkJ11N8UE9H8]D:gRi>;Q0
+R3
+R0
+w1607110440
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 475
+L0 30 182
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R6
+R7
+n@elevador_vlg_vec_tst

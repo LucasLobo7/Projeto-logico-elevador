@@ -1,0 +1,907 @@
+|Elevador
+botoes[0] => botoes[0].IN1
+botoes[1] => botoes[1].IN1
+botoes[2] => botoes[2].IN1
+botoes[3] => botoes[3].IN1
+botoes[4] => botoes[4].IN1
+botoes[5] => botoes[5].IN1
+botoes[6] => botoes[6].IN1
+botoes[7] => botoes[7].IN1
+botoes[8] => botoes[8].IN1
+botoes[9] => botoes[9].IN1
+botoes[10] => botoes[10].IN1
+botoes[11] => botoes[11].IN1
+botoes[12] => botoes[12].IN1
+botoes[13] => botoes[13].IN1
+botoes[14] => botoes[14].IN1
+botoes[15] => botoes[15].IN1
+ledbotao[0] <= estadobotao[0].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[1] <= estadobotao[1].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[2] <= estadobotao[2].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[3] <= estadobotao[3].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[4] <= estadobotao[4].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[5] <= estadobotao[5].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[6] <= estadobotao[6].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[7] <= estadobotao[7].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[8] <= estadobotao[8].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[9] <= estadobotao[9].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[10] <= estadobotao[10].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[11] <= estadobotao[11].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[12] <= estadobotao[12].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[13] <= estadobotao[13].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[14] <= estadobotao[14].DB_MAX_OUTPUT_PORT_TYPE
+ledbotao[15] <= estadobotao[15].DB_MAX_OUTPUT_PORT_TYPE
+display_uni[0] <= controledisplay:comb_3.port1
+display_uni[1] <= controledisplay:comb_3.port1
+display_uni[2] <= controledisplay:comb_3.port1
+display_uni[3] <= controledisplay:comb_3.port1
+display_uni[4] <= controledisplay:comb_3.port1
+display_uni[5] <= controledisplay:comb_3.port1
+display_uni[6] <= controledisplay:comb_3.port1
+display_dez[0] <= controledisplay:comb_3.port2
+display_dez[1] <= controledisplay:comb_3.port2
+display_dez[2] <= controledisplay:comb_3.port2
+display_dez[3] <= controledisplay:comb_3.port2
+display_dez[4] <= controledisplay:comb_3.port2
+display_dez[5] <= controledisplay:comb_3.port2
+display_dez[6] <= controledisplay:comb_3.port2
+andarprovisorio[0] <= andaratual[0].DB_MAX_OUTPUT_PORT_TYPE
+andarprovisorio[1] <= andaratual[1].DB_MAX_OUTPUT_PORT_TYPE
+andarprovisorio[2] <= andaratual[2].DB_MAX_OUTPUT_PORT_TYPE
+andarprovisorio[3] <= andaratual[3].DB_MAX_OUTPUT_PORT_TYPE
+sensor => sensor.IN1
+clock => clock.IN4
+clear => clear.IN3
+segurar => segurar.IN1
+cartao_acesso => cartao_acesso.IN1
+fechar => ~NO_FANOUT~
+
+
+|Elevador|controledisplay:comb_3
+A[0] => du.IN0
+A[0] => du.IN1
+A[0] => du.IN1
+A[0] => du.IN1
+A[0] => du.IN1
+A[0] => du.IN0
+A[0] => du.IN1
+A[0] => du.IN1
+A[0] => du.IN1
+A[0] => du.IN1
+A[0] => du.IN1
+A[0] => du.IN0
+A[0] => du.IN0
+A[0] => du.IN0
+A[1] => du.IN0
+A[1] => du.IN0
+A[1] => du.IN1
+A[1] => du.IN1
+A[1] => du.IN0
+A[1] => du.IN0
+A[1] => du.IN1
+A[1] => du.IN1
+A[1] => du.IN0
+A[1] => du.IN1
+A[1] => dd.IN0
+A[2] => du.IN1
+A[2] => du.IN1
+A[2] => du.IN0
+A[2] => du.IN1
+A[2] => du.IN1
+A[2] => du.IN0
+A[2] => du.IN0
+A[2] => du.IN0
+A[2] => du.IN1
+A[2] => du.IN1
+A[2] => dd.IN1
+A[3] => du.IN1
+A[3] => du.IN1
+A[3] => du.IN1
+A[3] => du.IN1
+A[3] => du.IN1
+A[3] => du.IN1
+A[3] => du.IN1
+A[3] => du.IN1
+A[3] => dd.IN1
+A[3] => dd.IN1
+A[3] => dd.IN1
+A[3] => dd.IN1
+du[0] <= du.DB_MAX_OUTPUT_PORT_TYPE
+du[1] <= du.DB_MAX_OUTPUT_PORT_TYPE
+du[2] <= du.DB_MAX_OUTPUT_PORT_TYPE
+du[3] <= du.DB_MAX_OUTPUT_PORT_TYPE
+du[4] <= du.DB_MAX_OUTPUT_PORT_TYPE
+du[5] <= du.DB_MAX_OUTPUT_PORT_TYPE
+du[6] <= du.DB_MAX_OUTPUT_PORT_TYPE
+dd[0] <= dd.DB_MAX_OUTPUT_PORT_TYPE
+dd[1] <= <VCC>
+dd[2] <= <VCC>
+dd[3] <= dd.DB_MAX_OUTPUT_PORT_TYPE
+dd[4] <= dd.DB_MAX_OUTPUT_PORT_TYPE
+dd[5] <= dd.DB_MAX_OUTPUT_PORT_TYPE
+dd[6] <= <GND>
+
+
+|Elevador|apertarbotao:comb_4
+botao[0] => botaochecado[0].DATAIN
+botao[1] => botaochecado[1].DATAIN
+botao[2] => botaochecado[2].DATAIN
+botao[3] => botaochecado[3].DATAIN
+botao[4] => botaochecado[4].DATAIN
+botao[5] => botaochecado[5].DATAIN
+botao[6] => botaochecado.IN0
+botao[7] => botaochecado.IN0
+botao[8] => botaochecado.IN0
+botao[9] => botaochecado.IN0
+botao[10] => botaochecado.IN0
+botao[11] => botaochecado.IN0
+botao[12] => botaochecado.IN0
+botao[13] => botaochecado.IN0
+botao[14] => botaochecado.IN0
+botao[15] => botaochecado.IN0
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+checagem => botaochecado.IN1
+botaochecado[0] <= botao[0].DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[1] <= botao[1].DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[2] <= botao[2].DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[3] <= botao[3].DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[4] <= botao[4].DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[5] <= botao[5].DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[6] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[7] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[8] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[9] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[10] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[11] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[12] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[13] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[14] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+botaochecado[15] <= botaochecado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadoclear:comb_5
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[0] => cl.IN1
+a[1] => cl.IN1
+a[1] => cl.IN1
+a[1] => cl.IN1
+a[1] => cl.IN1
+a[1] => cl.IN1
+a[1] => cl.IN1
+a[1] => cl.IN1
+a[1] => cl.IN1
+a[2] => cl.IN0
+a[2] => cl.IN0
+a[2] => cl.IN0
+a[2] => cl.IN0
+a[3] => cl.IN1
+a[3] => cl.IN1
+a[3] => cl.IN1
+a[3] => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+clear => cl.IN1
+pare => ~NO_FANOUT~
+cl[0] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[1] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[2] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[3] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[4] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[5] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[6] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[7] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[8] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[9] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[10] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[11] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[12] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[13] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[14] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+cl[15] <= cl.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6
+cl[0] => _.IN1
+cl[1] => _.IN1
+cl[2] => _.IN1
+cl[3] => _.IN1
+cl[4] => _.IN1
+cl[5] => _.IN1
+cl[6] => _.IN1
+cl[7] => _.IN1
+cl[8] => _.IN1
+cl[9] => _.IN1
+cl[10] => _.IN1
+cl[11] => _.IN1
+cl[12] => _.IN1
+cl[13] => _.IN1
+cl[14] => _.IN1
+cl[15] => _.IN1
+botoes[0] => botoes[0].IN1
+botoes[1] => botoes[1].IN1
+botoes[2] => botoes[2].IN1
+botoes[3] => botoes[3].IN1
+botoes[4] => botoes[4].IN1
+botoes[5] => botoes[5].IN1
+botoes[6] => botoes[6].IN1
+botoes[7] => botoes[7].IN1
+botoes[8] => botoes[8].IN1
+botoes[9] => botoes[9].IN1
+botoes[10] => botoes[10].IN1
+botoes[11] => botoes[11].IN1
+botoes[12] => botoes[12].IN1
+botoes[13] => botoes[13].IN1
+botoes[14] => botoes[14].IN1
+botoes[15] => botoes[15].IN1
+clock => ~NO_FANOUT~
+estadobotao[0] <= latcht:comb_3.port2
+estadobotao[1] <= latcht:comb_5.port2
+estadobotao[2] <= latcht:comb_7.port2
+estadobotao[3] <= latcht:comb_9.port2
+estadobotao[4] <= latcht:comb_11.port2
+estadobotao[5] <= latcht:comb_13.port2
+estadobotao[6] <= latcht:comb_15.port2
+estadobotao[7] <= latcht:comb_17.port2
+estadobotao[8] <= latcht:comb_19.port2
+estadobotao[9] <= latcht:comb_21.port2
+estadobotao[10] <= latcht:comb_23.port2
+estadobotao[11] <= latcht:comb_25.port2
+estadobotao[12] <= latcht:comb_27.port2
+estadobotao[13] <= latcht:comb_29.port2
+estadobotao[14] <= latcht:comb_31.port2
+estadobotao[15] <= latcht:comb_33.port2
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_3
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_5
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_7
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_9
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_11
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_13
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_15
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_17
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_19
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_21
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_23
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_25
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_27
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_29
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_31
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|estadodosbotoes:comb_6|latcht:comb_33
+s => s2.IN0
+r => s1.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|detectabotao:comb_7
+B[0] => apertado.IN1
+B[1] => andar.IN0
+B[2] => andar.IN0
+B[3] => andar.IN1
+B[3] => andar.IN1
+B[4] => andar.IN0
+B[5] => andar.IN1
+B[5] => andar.IN1
+B[6] => andar.IN1
+B[6] => andar.IN1
+B[7] => andar.IN1
+B[7] => andar.IN1
+B[7] => andar.IN1
+B[8] => andar.IN0
+B[9] => andar.IN1
+B[9] => andar.IN1
+B[10] => andar.IN1
+B[10] => andar.IN1
+B[11] => andar.IN1
+B[11] => andar.IN1
+B[11] => andar.IN1
+B[12] => andar.IN1
+B[12] => andar.IN1
+B[13] => andar.IN1
+B[13] => andar.IN1
+B[13] => andar.IN1
+B[14] => andar.IN1
+B[14] => andar.IN1
+B[14] => andar.IN1
+B[15] => andar.IN1
+B[15] => andar.IN1
+B[15] => andar.IN1
+B[15] => andar.IN1
+andar[0] <= andar.DB_MAX_OUTPUT_PORT_TYPE
+andar[1] <= andar.DB_MAX_OUTPUT_PORT_TYPE
+andar[2] <= andar.DB_MAX_OUTPUT_PORT_TYPE
+andar[3] <= andar.DB_MAX_OUTPUT_PORT_TYPE
+apertado <= apertado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|detsubida:comb_8
+botao[0] => ~NO_FANOUT~
+botao[1] => fio.IN0
+botao[2] => fio.IN0
+botao[3] => fio.IN0
+botao[4] => fio.IN0
+botao[5] => fio.IN0
+botao[6] => fio.IN0
+botao[7] => fio.IN0
+botao[8] => fio.IN0
+botao[9] => fio.IN0
+botao[10] => fio.IN0
+botao[11] => fio.IN0
+botao[12] => fio.IN0
+botao[13] => fio.IN0
+botao[14] => fio.IN0
+botao[15] => fio.IN0
+andar[0] => andar[0].IN1
+andar[1] => andar[1].IN1
+andar[2] => andar[2].IN1
+andar[3] => andar[3].IN1
+subida <= Mux16:comb_19.port2
+
+
+|Elevador|detsubida:comb_8|Mux16:comb_19
+in[0] => Mux0.IN15
+in[1] => Mux0.IN14
+in[2] => Mux0.IN13
+in[3] => Mux0.IN12
+in[4] => Mux0.IN11
+in[5] => Mux0.IN10
+in[6] => Mux0.IN9
+in[7] => Mux0.IN8
+in[8] => Mux0.IN7
+in[9] => Mux0.IN6
+in[10] => Mux0.IN5
+in[11] => Mux0.IN4
+in[12] => Mux0.IN3
+in[13] => Mux0.IN2
+in[14] => Mux0.IN1
+in[15] => Mux0.IN0
+sel[0] => Mux0.IN19
+sel[1] => Mux0.IN18
+sel[2] => Mux0.IN17
+sel[3] => Mux0.IN16
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|detdescida:comb_9
+botao[0] => fio.IN0
+botao[1] => fio.IN0
+botao[2] => fio.IN0
+botao[3] => fio.IN0
+botao[4] => fio.IN0
+botao[5] => fio.IN0
+botao[6] => fio.IN0
+botao[7] => fio.IN0
+botao[8] => fio.IN0
+botao[9] => fio.IN0
+botao[10] => fio.IN0
+botao[11] => fio.IN0
+botao[12] => fio.IN0
+botao[13] => fio.IN0
+botao[14] => fio.IN0
+botao[15] => ~NO_FANOUT~
+andar[0] => andar[0].IN1
+andar[1] => andar[1].IN1
+andar[2] => andar[2].IN1
+andar[3] => andar[3].IN1
+descida <= Mux16:comb_19.port2
+
+
+|Elevador|detdescida:comb_9|Mux16:comb_19
+in[0] => Mux0.IN15
+in[1] => Mux0.IN14
+in[2] => Mux0.IN13
+in[3] => Mux0.IN12
+in[4] => Mux0.IN11
+in[5] => Mux0.IN10
+in[6] => Mux0.IN9
+in[7] => Mux0.IN8
+in[8] => Mux0.IN7
+in[9] => Mux0.IN6
+in[10] => Mux0.IN5
+in[11] => Mux0.IN4
+in[12] => Mux0.IN3
+in[13] => Mux0.IN2
+in[14] => Mux0.IN1
+in[15] => Mux0.IN0
+sel[0] => Mux0.IN19
+sel[1] => Mux0.IN18
+sel[2] => Mux0.IN17
+sel[3] => Mux0.IN16
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|detecpare:comb_10
+botoes[0] => botoes[0].IN1
+botoes[1] => botoes[1].IN1
+botoes[2] => botoes[2].IN1
+botoes[3] => botoes[3].IN1
+botoes[4] => botoes[4].IN1
+botoes[5] => botoes[5].IN1
+botoes[6] => botoes[6].IN1
+botoes[7] => botoes[7].IN1
+botoes[8] => botoes[8].IN1
+botoes[9] => botoes[9].IN1
+botoes[10] => botoes[10].IN1
+botoes[11] => botoes[11].IN1
+botoes[12] => botoes[12].IN1
+botoes[13] => botoes[13].IN1
+botoes[14] => botoes[14].IN1
+botoes[15] => botoes[15].IN1
+andar[0] => andar[0].IN1
+andar[1] => andar[1].IN1
+andar[2] => andar[2].IN1
+andar[3] => andar[3].IN1
+apertado => pare.IN1
+pare <= pare.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|detecpare:comb_10|Mux16:comb_3
+in[0] => Mux0.IN15
+in[1] => Mux0.IN14
+in[2] => Mux0.IN13
+in[3] => Mux0.IN12
+in[4] => Mux0.IN11
+in[5] => Mux0.IN10
+in[6] => Mux0.IN9
+in[7] => Mux0.IN8
+in[8] => Mux0.IN7
+in[9] => Mux0.IN6
+in[10] => Mux0.IN5
+in[11] => Mux0.IN4
+in[12] => Mux0.IN3
+in[13] => Mux0.IN2
+in[14] => Mux0.IN1
+in[15] => Mux0.IN0
+sel[0] => Mux0.IN19
+sel[1] => Mux0.IN18
+sel[2] => Mux0.IN17
+sel[3] => Mux0.IN16
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|nandar:comb_11
+clk => clock.IN0
+C => D.IN1
+C => D.IN1
+C => D.IN1
+C => D.IN1
+C => D.IN1
+C => D.IN1
+C => D.IN1
+C => D.IN1
+C => D.IN1
+C => D.IN1
+clear => clear.IN4
+habilitar => clock.IN1
+S[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= flipflopjk:comb_6.port5
+S[2] <= flipflopjk:comb_8.port5
+S[3] <= flipflopjk:comb_10.port5
+
+
+|Elevador|nandar:comb_11|flipflopjk:comb_4
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|nandar:comb_11|flipflopjk:comb_6
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|nandar:comb_11|flipflopjk:comb_8
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|nandar:comb_11|flipflopjk:comb_10
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|portaaberta:comb_13
+clock => ck.IN1
+sensor => segura.IN0
+chegada => clear.IN1
+segurar => segura.IN1
+estadomover => segura.IN1
+mover <= flipflopjk:comb_15.port5
+
+
+|Elevador|portaaberta:comb_13|flipflopjk:comb_10
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|portaaberta:comb_13|flipflopjk:comb_11
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|portaaberta:comb_13|flipflopjk:comb_13
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|portaaberta:comb_13|flipflopjk:comb_15
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|movendo:comb_15
+clock => clock.IN1
+clr => clr.IN1
+subirP => subirP.IN1
+subirmovendo => subirmovendo.IN1
+descermovendo => descermovendo.IN1
+apertado => apertado.IN1
+NparadoAndar => estadomover.IN0
+estadodirecao <= estadodirecao.DB_MAX_OUTPUT_PORT_TYPE
+estadomover <= estadomover.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|movendo:comb_15|movendo1:comb_3
+clock => clock.IN1
+CLR => CLR.IN1
+subirA => NP.IN0
+subirA => _.IN1
+descerA => NP.IN1
+descerA => _.IN1
+subir <= flipflopjk:comb_5.port5
+Nparado <= Nparado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|movendo:comb_15|movendo1:comb_3|flipflopjk:comb_5
+j => Mux0.IN3
+k => Mux0.IN4
+ck => Q~reg0.CLK
+clr => Q.IN0
+clr => Q~reg0.ACLR
+ps => Q.IN1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|movendo:comb_15|movendo2:comb_4
+apertado => NP.OUTPUTSELECT
+Nparado => NP.DATAA
+NP <= NP.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|movendo:comb_15|movendo3:comb_5
+subirP => subir~reg0.DATAIN
+Nparado => subir~reg0.CLK
+subir <= subir~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17
+andar[0] => andar5[0].IN1
+andar[1] => andar5[1].IN1
+andar[2] => andar5[2].IN1
+andar[3] => andar5[3].IN1
+botao[0] => botao5[0].IN1
+botao[1] => botao5[1].IN1
+botao[2] => botao5[2].IN1
+botao[3] => botao5[3].IN1
+s <= somador5bits:comb_19.port3
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_18
+Ea[0] => Ea[0].IN1
+Ea[1] => Ea[1].IN1
+Ea[2] => Ea[2].IN1
+Ea[3] => Ea[3].IN1
+Ea[4] => Ea[4].IN1
+Eb[0] => Eb[0].IN1
+Eb[1] => Eb[1].IN1
+Eb[2] => Eb[2].IN1
+Eb[3] => Eb[3].IN1
+Eb[4] => Eb[4].IN1
+vemUm => vemUm.IN1
+S[0] <= somaBit:comb_3.port3
+S[1] <= somaBit:comb_4.port3
+S[2] <= somaBit:comb_5.port3
+S[3] <= somaBit:comb_6.port3
+S[4] <= somaBit:comb_7.port3
+estouro <= somaBit:comb_7.port4
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_3
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_4
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_5
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_6
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_18|somaBit:comb_7
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_19
+Ea[0] => Ea[0].IN1
+Ea[1] => Ea[1].IN1
+Ea[2] => Ea[2].IN1
+Ea[3] => Ea[3].IN1
+Ea[4] => Ea[4].IN1
+Eb[0] => Eb[0].IN1
+Eb[1] => Eb[1].IN1
+Eb[2] => Eb[2].IN1
+Eb[3] => Eb[3].IN1
+Eb[4] => Eb[4].IN1
+vemUm => vemUm.IN1
+S[0] <= somaBit:comb_3.port3
+S[1] <= somaBit:comb_4.port3
+S[2] <= somaBit:comb_5.port3
+S[3] <= somaBit:comb_6.port3
+S[4] <= somaBit:comb_7.port3
+estouro <= somaBit:comb_7.port4
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_19|somaBit:comb_3
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_19|somaBit:comb_4
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_19|somaBit:comb_5
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_19|somaBit:comb_6
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Elevador|sobeoudesce:comb_17|somador5bits:comb_19|somaBit:comb_7
+pValor => saida.IN0
+pValor => vaiUm.IN0
+pValor => vaiUm.IN0
+sValor => saida.IN1
+sValor => vaiUm.IN1
+sValor => vaiUm.IN1
+vemUm => saida.IN1
+vemUm => vaiUm.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+vaiUm <= vaiUm.DB_MAX_OUTPUT_PORT_TYPE
+
+
